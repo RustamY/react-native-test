@@ -23,7 +23,11 @@ const Container: React.FC<Props> = ({ children }) => {
 
   return (
     <View style={styles.wrapper}>
-      <StatusBar backgroundColor="transparent" translucent={true} />
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle="light-content"
+        translucent={true}
+      />
       <View style={{ marginTop: headerHeight }}>
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
           <View style={styles.content}>{children}</View>

@@ -33,6 +33,7 @@ const Navigation = () => {
       <Stack.Navigator
         screenOptions={{
           headerTransparent: true,
+          headerShown: true,
           headerTitleStyle: {
             color: navTheme.colors.white,
             fontWeight: '400',

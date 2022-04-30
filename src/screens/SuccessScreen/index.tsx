@@ -50,7 +50,7 @@ const makeStyles = (colors: ColorsType) =>
       flex: 1,
       paddingHorizontal: 15,
       paddingTop: 15,
-      paddingBottom: 40,
+      paddingBottom: 20,
       backgroundColor: colors.white,
     },
     title: {

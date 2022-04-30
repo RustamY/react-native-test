@@ -81,8 +81,6 @@ const CustomTextInput: React.FC<Props> = props => {
 const makeStyles = (colors: ColorsType) =>
   StyleSheet.create({
     container: {
-      marginBottom: 20,
-      marginTop: 20,
       paddingTop: 5,
       paddingHorizontal: 10,
       width: '100%',

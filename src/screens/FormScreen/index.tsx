@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, View } from "react-native";
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTheme } from '@react-navigation/native';
 
@@ -48,7 +48,7 @@ const FormScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <Container>
-      <View style={styles.wrapper}>
+      <KeyboardAvoidingView style={styles.wrapper} behavior="padding">
         <View style={styles.children}>
           <ListItem
             label="Тип проблемы"
@@ -71,7 +71,7 @@ const FormScreen: React.FC<Props> = ({ navigation }) => {
             onChangeText={text => setDescription(text)}
             value={description}
             multiline
-            numberOfLines={6}
+            numberOfLines={11}
           />
           <View style={styles.checkbox}>
             <CustomCheckbox
@@ -81,9 +81,9 @@ const FormScreen: React.FC<Props> = ({ navigation }) => {
             />
           </View>
         </View>
-        <View style={styles.footer}>
-          <Button onPress={onContinue} title="Отправить" />
-        </View>
+      </KeyboardAvoidingView>
+      <View style={styles.footer}>
+        <Button onPress={onContinue} title="Отправить" />
       </View>
     </Container>
   );
@@ -95,7 +95,7 @@ const makeStyles = (colors: ColorsType) =>
       flex: 1,
     },
     children: {
-      paddingBottom: 16,
+      paddingBottom: 12,
     },
     checkbox: {
       paddingTop: 16,
@@ -108,6 +108,7 @@ const makeStyles = (colors: ColorsType) =>
       left: 0,
       flex: 1,
       paddingTop: 15,
+      paddingHorizontal: 15,
       paddingBottom: 20,
       borderTopColor: 'rgba(0, 0, 0, 0.153682)',
       borderTopWidth: 1,

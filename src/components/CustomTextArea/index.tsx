@@ -1,10 +1,13 @@
 import React from 'react';
-import { TextInput, TextInputProps, StyleSheet } from 'react-native';
+import { TextInput, TextInputProps, StyleSheet, Platform } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 
 import { ColorsType } from 'src/types/CommonTypes';
 
-const CustomTextArea: React.FC<TextInputProps> = props => {
+const CustomTextArea: React.FC<TextInputProps> = ({
+  numberOfLines,
+  ...props
+}) => {
   const theme = useTheme();
   const colors = theme.colors as ColorsType;
   const styles = makeStyles(colors);
@@ -14,6 +17,7 @@ const CustomTextArea: React.FC<TextInputProps> = props => {
       {...props}
       style={styles.input}
       placeholderTextColor={colors.cyanBlue}
+      numberOfLines={Platform.OS === 'ios' ? undefined : numberOfLines}
     />
   );
 };
@@ -30,6 +34,7 @@ const makeStyles = (colors: ColorsType) => {
       fontSize: 16,
       color: colors.midnight,
       fontWeight: '400',
+      height: 234,
     },
   });
 };

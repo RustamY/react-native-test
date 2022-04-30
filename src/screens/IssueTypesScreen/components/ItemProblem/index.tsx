@@ -9,12 +9,14 @@ import { useTheme } from '@react-navigation/native';
 
 type Props = {
   item: ProblemType;
+  index: number;
   selectedProblem: ProblemType | null;
   onSelectProblem: (value: ProblemType) => void;
 };
 
 const ItemProblem: React.FC<Props> = ({
   item,
+  index,
   onSelectProblem,
   selectedProblem,
 }) => {
@@ -30,7 +32,10 @@ const ItemProblem: React.FC<Props> = ({
   };
 
   return (
-    <TouchableOpacity onPress={onPress} style={styles.wrapper}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.wrapper, index !== 0 && styles.separator]}
+    >
       <View style={styles.content}>
         <Text style={styles.title}>{title}</Text>
         <Text>{description}</Text>
@@ -45,11 +50,13 @@ const makeStyles = (colors: ColorsType) =>
     wrapper: {
       paddingTop: 10,
       paddingBottom: 12,
-      boxShadow: 'inset 0px -1px 0px rgba(223, 230, 237, 0.5)',
-      borderBottomWidth: 1,
       borderColor: 'rgba(223, 230, 237, 0.5)',
       flexDirection: 'row',
       justifyContent: 'space-between',
+    },
+    separator: {
+      borderColor: 'rgba(223, 230, 237, 0.5)',
+      borderTopWidth: 1,
     },
     content: {
       maxWidth: '90%',

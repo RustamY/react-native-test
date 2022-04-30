@@ -12,7 +12,7 @@ import React from 'react';
 import { ImageBackground, SafeAreaView } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-import Navigation from 'src/services/navigation';
+import Navigation from 'src/navigation';
 
 const App = () => {
   return (

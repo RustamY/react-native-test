@@ -69,17 +69,18 @@ const IssueTypesScreen: React.FC<Props> = ({ route, navigation }) => {
       <View style={styles.wrapper}>
         <FlatList
           data={LIST_PROBLEMS}
-          renderItem={({ item }) => (
+          renderItem={({ item, index }) => (
             <ItemProblem
               item={item}
+              index={index}
               selectedProblem={value}
               onSelectProblem={setValue}
             />
           )}
         />
-        <View style={styles.footer}>
-          <Button disabled={!value} onPress={onContinue} title="Выбрать" />
-        </View>
+      </View>
+      <View style={styles.footer}>
+        <Button disabled={!value} onPress={onContinue} title="Выбрать" />
       </View>
     </Container>
   );
@@ -88,16 +89,18 @@ const IssueTypesScreen: React.FC<Props> = ({ route, navigation }) => {
 const makeStyles = (colors: ColorsType) =>
   StyleSheet.create({
     wrapper: {
-      paddingBottom: 100,
+      paddingBottom: 70,
       height: '100%',
     },
     footer: {
       position: 'absolute',
       bottom: 0,
       right: 0,
-      width: '100%',
+      left: 0,
+      flex: 1,
       paddingTop: 15,
-      paddingBottom: 40,
+      paddingBottom: 20,
+      paddingHorizontal: 15,
       borderTopColor: 'rgba(0, 0, 0, 0.153682)',
       borderTopWidth: 1,
       backgroundColor: colors.white,
