@@ -24,6 +24,7 @@ import SuccessScreen from 'src/screens/SuccessScreen';
 import ArrowBackIcon from 'src/assets/svg/arrow-back.svg';
 import CloseIcon from 'src/assets/svg/close.svg';
 import { RootStackParamList, ThemeType } from 'src/types/CommonTypes';
+import { TouchableOpacity, Text, View } from "react-native";
 
 const Navigation = () => {
   const Stack = createNativeStackNavigator<RootStackParamList>();

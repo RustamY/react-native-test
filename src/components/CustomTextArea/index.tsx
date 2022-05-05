@@ -35,6 +35,7 @@ const makeStyles = (colors: ColorsType) => {
       color: colors.midnight,
       fontWeight: '400',
       height: 234,
+      fontFamily: 'SF-Display',
     },
   });
 };

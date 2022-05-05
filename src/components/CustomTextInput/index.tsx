@@ -93,6 +93,8 @@ const makeStyles = (colors: ColorsType) =>
       lineHeight: 16,
       height: '100%',
       color: colors.midnight,
+      fontFamily: 'SF-Display',
+      paddingTop: 18,
     },
     label: {
       lineHeight: 16,
@@ -100,6 +102,7 @@ const makeStyles = (colors: ColorsType) =>
       fontWeight: '400',
       color: colors.cyanBlue,
       paddingBottom: 6,
+      fontFamily: 'SF-Text',
     },
     animatedLabel: {
       top: 5,

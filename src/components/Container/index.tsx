@@ -16,7 +16,7 @@ type Props = {
 };
 
 const Container: React.FC<Props> = ({ children }) => {
-  const headerHeight = useHeaderHeight();
+  const headerHeight = useHeaderHeight() - 8;
 
   const { colors } = useTheme();
   const styles = makeStyles(colors as ColorsType);

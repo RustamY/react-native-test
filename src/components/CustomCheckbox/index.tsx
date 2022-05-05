@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
     color: '#2A333D',
     marginLeft: 8,
+    fontFamily: 'SF-Display',
   },
 });
 

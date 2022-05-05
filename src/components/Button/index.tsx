@@ -25,7 +25,8 @@ const makeStyles = (colors: ColorsType) =>
     button: {
       backgroundColor: '#356AFF',
       borderRadius: 8,
-      paddingVertical: 10,
+      paddingTop: 10,
+      paddingBottom: 11,
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
@@ -34,6 +35,10 @@ const makeStyles = (colors: ColorsType) =>
       color: colors.white,
       fontSize: 19,
       fontWeight: '400',
+      fontFamily: 'SF-Display',
+      letterSpacing: 0.2,
+      lineHeight: 23,
+      fontStyle: 'normal',
     },
   });
 

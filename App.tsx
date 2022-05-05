@@ -13,6 +13,9 @@ import { ImageBackground, SafeAreaView } from 'react-native';
 import { StyleSheet } from 'react-native';
 
 import Navigation from 'src/navigation';
+import Reactotron, { overlay } from 'reactotron-react-native';
+
+Reactotron.configure().use(overlay()).connect();
 
 const App = () => {
   return (
@@ -41,4 +44,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+// @ts-ignore
+const AppWithBenefits = __DEV__ ? Reactotron.overlay(App) : App;
+
+export default AppWithBenefits;

@@ -38,7 +38,7 @@ const ItemProblem: React.FC<Props> = ({
     >
       <View style={styles.content}>
         <Text style={styles.title}>{title}</Text>
-        <Text>{description}</Text>
+        <Text style={styles.description}>{description}</Text>
       </View>
       <View>{isSelected && <Check width={24} height={24} />}</View>
     </TouchableOpacity>
@@ -66,12 +66,14 @@ const makeStyles = (colors: ColorsType) =>
       fontWeight: '500',
       fontSize: 16,
       lineHeight: 21,
+      fontFamily: 'SF-Display-Medium',
     },
     description: {
       color: colors.cyanBlue,
       fontWeight: '400',
       fontSize: 13,
       lineHeight: 17,
+      fontFamily: 'SF-Text',
     },
   });
 

@@ -49,6 +49,7 @@ const makeStyles = (colors: ColorsType) => {
     contentEmptyValue: {
       alignItems: 'center',
       flexDirection: 'row',
+      fontFamily: 'SF-Display',
     },
     label: {
       fontSize: 12,
@@ -56,6 +57,7 @@ const makeStyles = (colors: ColorsType) => {
       lineHeight: 16,
       letterSpacing: 0.1,
       color: colors.cyanBlue,
+      fontFamily: 'SF-Text',
     },
     labelEmptyValue: {
       fontSize: 16,
@@ -67,6 +69,7 @@ const makeStyles = (colors: ColorsType) => {
       letterSpacing: 0.5,
       color: colors.midnight,
       marginRight: 24,
+      fontFamily: 'SF-Display',
     },
   });
 };

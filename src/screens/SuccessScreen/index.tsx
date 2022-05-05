@@ -61,6 +61,7 @@ const makeStyles = (colors: ColorsType) =>
       color: colors.midnight,
       textAlign: 'center',
       letterSpacing: 0.2,
+      fontFamily: 'SF-Display-Bold',
     },
     description: {
       letterSpacing: 0.2,
@@ -70,6 +71,7 @@ const makeStyles = (colors: ColorsType) =>
       fontWeight: '500',
       lineHeight: 21,
       marginTop: 8,
+      fontFamily: 'SF-Display-Medium',
     },
   });
 
