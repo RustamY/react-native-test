@@ -39,7 +39,7 @@ const makeStyles = (colors: ColorsType) =>
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
-      paddingBottom: 100,
+      paddingBottom: 50,
     },
     footer: {
       justifyContent: 'center',

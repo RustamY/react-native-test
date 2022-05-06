@@ -38,10 +38,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
     lineHeight: 18,
-    letterSpacing: 0.2,
+    letterSpacing: 0.6,
     color: '#2A333D',
     marginLeft: 8,
     fontFamily: 'SF-Display',
+    fontStyle: 'normal',
   },
 });
 

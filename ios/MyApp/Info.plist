@@ -61,6 +61,8 @@
 		<string>SF-Text.otf</string>
 		<string>SF-Display-Bold.otf</string>
 		<string>SF-Display-Medium.otf</string>
+		<string>SF-Text-Bold.otf</string>
+		<string>SF-Text-Medium.otf</string>
 	</array>
 </dict>
 </plist>

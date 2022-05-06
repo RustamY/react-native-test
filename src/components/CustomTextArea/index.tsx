@@ -26,16 +26,16 @@ const makeStyles = (colors: ColorsType) => {
   return StyleSheet.create({
     input: {
       borderRadius: 8,
-      borderTopLeftRadius: 8,
-      borderTopRightRadius: 8,
       backgroundColor: 'rgba(233, 235, 239, 0.8)',
       padding: 12,
       textAlignVertical: 'top',
       fontSize: 16,
+      lineHeight: 21,
+      letterSpacing: 0.2,
       color: colors.midnight,
       fontWeight: '400',
-      height: 234,
-      fontFamily: 'SF-Display',
+      height: 250,
+      fontFamily: 'SF-Display-Medium',
     },
   });
 };

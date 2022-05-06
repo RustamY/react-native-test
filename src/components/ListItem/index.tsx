@@ -55,9 +55,9 @@ const makeStyles = (colors: ColorsType) => {
       fontSize: 12,
       fontWeight: '400',
       lineHeight: 16,
-      letterSpacing: 0.1,
+      letterSpacing: 0.5,
       color: colors.cyanBlue,
-      fontFamily: 'SF-Text',
+      fontFamily: 'SF-Text-Medium',
     },
     labelEmptyValue: {
       fontSize: 16,
@@ -66,10 +66,11 @@ const makeStyles = (colors: ColorsType) => {
       fontSize: 16,
       fontWeight: '400',
       lineHeight: 19,
-      letterSpacing: 0.5,
+      letterSpacing: 0.8,
       color: colors.midnight,
       marginRight: 24,
-      fontFamily: 'SF-Display',
+      fontFamily: 'SF-Display-Medium',
+      marginTop: 3,
     },
   });
 };

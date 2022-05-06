@@ -59,14 +59,15 @@ const makeStyles = (colors: ColorsType) =>
       borderTopWidth: 1,
     },
     content: {
-      maxWidth: '90%',
+      marginRight: 52,
     },
     title: {
       color: colors.midnight,
       fontWeight: '500',
       fontSize: 16,
       lineHeight: 21,
-      fontFamily: 'SF-Display-Medium',
+      letterSpacing: 0.2,
+      fontFamily: 'SF-Display-Bold',
     },
     description: {
       color: colors.cyanBlue,
@@ -74,6 +75,8 @@ const makeStyles = (colors: ColorsType) =>
       fontSize: 13,
       lineHeight: 17,
       fontFamily: 'SF-Text',
+      marginTop: -3,
+      letterSpacing: 0.3,
     },
   });
 

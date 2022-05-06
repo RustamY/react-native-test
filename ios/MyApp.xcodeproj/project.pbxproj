@@ -22,6 +22,8 @@
 		44668C04E9B44EC1A1057BC6 /* SF-Text.otf in Resources */ = {isa = PBXBuildFile; fileRef = F128E5D9209B452AA53845F5 /* SF-Text.otf */; };
 		35AD1389171E44FB86DED405 /* SF-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9C5896BA82A44F781FDA0F7 /* SF-Display-Bold.otf */; };
 		9942CF0F9F654312B9604178 /* SF-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 148BD8A097D94B7796C68E91 /* SF-Display-Medium.otf */; };
+		8987EB053A554750920B20EA /* SF-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20257C691A5C429781C536FB /* SF-Text-Bold.otf */; };
+		61FDA9E4CFFD4E1897B90C8D /* SF-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0DE94BDE05F4FCEB2ACA47B /* SF-Text-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		F128E5D9209B452AA53845F5 /* SF-Text.otf */ = {isa = PBXFileReference; name = "SF-Text.otf"; path = "../src/assets/fonts/SF-Text.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B9C5896BA82A44F781FDA0F7 /* SF-Display-Bold.otf */ = {isa = PBXFileReference; name = "SF-Display-Bold.otf"; path = "../src/assets/fonts/SF-Display-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		148BD8A097D94B7796C68E91 /* SF-Display-Medium.otf */ = {isa = PBXFileReference; name = "SF-Display-Medium.otf"; path = "../src/assets/fonts/SF-Display-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		20257C691A5C429781C536FB /* SF-Text-Bold.otf */ = {isa = PBXFileReference; name = "SF-Text-Bold.otf"; path = "../src/assets/fonts/SF-Text-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E0DE94BDE05F4FCEB2ACA47B /* SF-Text-Medium.otf */ = {isa = PBXFileReference; name = "SF-Text-Medium.otf"; path = "../src/assets/fonts/SF-Text-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,8 @@
 				F128E5D9209B452AA53845F5 /* SF-Text.otf */,
 				B9C5896BA82A44F781FDA0F7 /* SF-Display-Bold.otf */,
 				148BD8A097D94B7796C68E91 /* SF-Display-Medium.otf */,
+				20257C691A5C429781C536FB /* SF-Text-Bold.otf */,
+				E0DE94BDE05F4FCEB2ACA47B /* SF-Text-Medium.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 				44668C04E9B44EC1A1057BC6 /* SF-Text.otf in Resources */,
 				35AD1389171E44FB86DED405 /* SF-Display-Bold.otf in Resources */,
 				9942CF0F9F654312B9604178 /* SF-Display-Medium.otf in Resources */,
+				8987EB053A554750920B20EA /* SF-Text-Bold.otf in Resources */,
+				61FDA9E4CFFD4E1897B90C8D /* SF-Text-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

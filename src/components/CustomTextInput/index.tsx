@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import {
   View,
   StyleSheet,
@@ -9,7 +9,7 @@ import {
   TextInputFocusEventData,
 } from 'react-native';
 
-import { useTheme } from '@react-navigation/native';
+import { useTheme, useIsFocused } from '@react-navigation/native';
 import { ColorsType } from 'src/types/CommonTypes';
 
 type Props = TextInputProps & {
@@ -17,6 +17,11 @@ type Props = TextInputProps & {
 };
 
 const CustomTextInput: React.FC<Props> = props => {
+  const isFocusedScreen = useIsFocused();
+  useLayoutEffect(() => {
+    startAnimation(false);
+  }, [isFocusedScreen]);
+
   const _animatedIsFocused = useRef(
     new Animated.Value(!props.value ? 0 : 1),
   ).current;
@@ -49,12 +54,15 @@ const CustomTextInput: React.FC<Props> = props => {
     left: 12,
     top: _animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: [20, 4],
+      outputRange: [20, 9],
     }),
     fontSize: _animatedIsFocused.interpolate({
       inputRange: [0, 1],
       outputRange: [16, 12],
     }),
+    fontFamily: 'SF-Text-Medium',
+    letterSpacing: 0.5,
+    lineHeight: 16,
   };
 
   return (
@@ -93,16 +101,18 @@ const makeStyles = (colors: ColorsType) =>
       lineHeight: 16,
       height: '100%',
       color: colors.midnight,
-      fontFamily: 'SF-Display',
-      paddingTop: 18,
+      fontFamily: 'SF-Display-Medium',
+      paddingTop: 20,
+      paddingBottom: 0,
+      letterSpacing: 0.5,
     },
     label: {
-      lineHeight: 16,
+      lineHeight: 19,
       fontSize: 16,
       fontWeight: '400',
       color: colors.cyanBlue,
       paddingBottom: 6,
-      fontFamily: 'SF-Text',
+      fontFamily: 'SF-Display',
     },
     animatedLabel: {
       top: 5,
