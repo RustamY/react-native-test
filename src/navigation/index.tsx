@@ -12,6 +12,7 @@ import React from 'react';
 
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StyleSheet, Text, View } from 'react-native';
 
 import FormScreen from 'src/screens/FormScreen';
 import {
@@ -24,7 +25,10 @@ import SuccessScreen from 'src/screens/SuccessScreen';
 import ArrowBackIcon from 'src/assets/svg/arrow-back.svg';
 import CloseIcon from 'src/assets/svg/close.svg';
 import { RootStackParamList, ThemeType } from 'src/types/CommonTypes';
-import { TouchableOpacity, Text, View } from "react-native";
+
+const CustomTitle = (props: any) => (
+  <Text style={styles.customTitle}>{props.children}</Text>
+);
 
 const Navigation = () => {
   const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -39,7 +43,10 @@ const Navigation = () => {
             color: navTheme.colors.white,
             fontWeight: '400',
             fontSize: 17,
+            fontFamily: 'SF-Display',
           },
+          headerTitle: props => <CustomTitle {...props} />,
+          headerBackVisible: false,
           headerTitleAlign: 'center',
         }}
         initialRouteName={FORM_SCREEN}
@@ -82,5 +89,16 @@ const navTheme: ThemeType = {
     cyanBlue: '#8F9DAD',
   },
 };
+
+const styles = StyleSheet.create({
+  customTitle: {
+    color: 'white',
+    letterSpacing: 0.2,
+    fontFamily: 'SF-Display',
+    fontWeight: '400',
+    fontSize: 17,
+    lineHeight: 22,
+  },
+});
 
 export default Navigation;

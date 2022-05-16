@@ -60,6 +60,7 @@ const makeStyles = (colors: ColorsType) =>
     content: {
       height: '100%',
       margin: 5,
+      marginTop: 0,
       marginBottom: 0,
       paddingTop: 20,
       paddingBottom: 20,
