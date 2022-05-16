@@ -39,12 +39,6 @@ const Navigation = () => {
         screenOptions={{
           headerTransparent: true,
           headerShown: true,
-          headerTitleStyle: {
-            color: navTheme.colors.white,
-            fontWeight: '400',
-            fontSize: 17,
-            fontFamily: 'SF-Display',
-          },
           headerTitle: props => <CustomTitle {...props} />,
           headerBackVisible: false,
           headerTitleAlign: 'center',
@@ -92,7 +86,7 @@ const navTheme: ThemeType = {
 
 const styles = StyleSheet.create({
   customTitle: {
-    color: 'white',
+    color: navTheme.colors.white,
     letterSpacing: 0.2,
     fontFamily: 'SF-Display',
     fontWeight: '400',
