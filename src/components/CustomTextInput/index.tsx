@@ -60,7 +60,7 @@ const CustomTextInput: React.FC<Props> = props => {
       inputRange: [0, 1],
       outputRange: [16, 12],
     }),
-    fontFamily: 'SF-Text-Medium',
+    fontFamily: 'SF-Text',
     letterSpacing: 0.5,
     lineHeight: 16,
   };
@@ -101,7 +101,7 @@ const makeStyles = (colors: ColorsType) =>
       lineHeight: 16,
       height: '100%',
       color: colors.midnight,
-      fontFamily: 'SF-Display-Medium',
+      fontFamily: 'SF-Display',
       paddingTop: 20,
       paddingBottom: 0,
       letterSpacing: 0.5,

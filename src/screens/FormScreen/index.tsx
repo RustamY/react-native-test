@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { KeyboardAvoidingView, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useTheme } from '@react-navigation/native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import {
   ISSUE_TYPES_SCREEN,
@@ -24,6 +25,7 @@ const FormScreen: React.FC<Props> = ({ navigation }) => {
   const [email, setEmail] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [includeThank, setIncludeThank] = useState<boolean>(false);
+  const [isKeyboadVisible, setIsKeyboadVisible] = useState<boolean>(false);
   const { colors } = useTheme();
   const styles = makeStyles(colors as ColorsType);
 
@@ -46,9 +48,21 @@ const FormScreen: React.FC<Props> = ({ navigation }) => {
     formReset();
   };
 
+  const onKeyboardDidShow = () => {
+    setIsKeyboadVisible(true);
+  };
+
+  const onKeyboardDidHide = () => {
+    setIsKeyboadVisible(false);
+  };
+
   return (
     <Container>
-      <KeyboardAvoidingView style={styles.wrapper} behavior="padding">
+      <KeyboardAwareScrollView
+        style={styles.wrapper}
+        onKeyboardDidShow={onKeyboardDidShow}
+        onKeyboardDidHide={onKeyboardDidHide}
+      >
         <View style={styles.children}>
           <ListItem
             label="Тип проблемы"
@@ -81,10 +95,12 @@ const FormScreen: React.FC<Props> = ({ navigation }) => {
             />
           </View>
         </View>
-      </KeyboardAvoidingView>
-      <View style={styles.footer}>
-        <Button onPress={onContinue} title="Отправить" />
-      </View>
+      </KeyboardAwareScrollView>
+      {!isKeyboadVisible && (
+        <View style={styles.footer}>
+          <Button onPress={onContinue} title="Отправить" />
+        </View>
+      )}
     </Container>
   );
 };
