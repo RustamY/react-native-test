@@ -12,7 +12,7 @@ import React from 'react';
 
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 import FormScreen from 'src/screens/FormScreen';
 import {
@@ -26,9 +26,13 @@ import ArrowBackIcon from 'src/assets/svg/arrow-back.svg';
 import CloseIcon from 'src/assets/svg/close.svg';
 import { RootStackParamList, ThemeType } from 'src/types/CommonTypes';
 
-const CustomTitle = (props: any) => (
-  <Text style={styles.customTitle}>{props.children}</Text>
-);
+const CustomTitle = (props: {
+  children?: string;
+  tintColor?: string | undefined;
+}) => {
+  const { children } = props;
+  return <Text style={styles.customTitle}>{children}</Text>;
+};
 
 const Navigation = () => {
   const Stack = createNativeStackNavigator<RootStackParamList>();
