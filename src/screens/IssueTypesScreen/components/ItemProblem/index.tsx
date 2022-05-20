@@ -34,13 +34,15 @@ const ItemProblem: React.FC<Props> = ({
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={[styles.wrapper, index !== 0 && styles.separator]}
+      style={[styles.row, styles.wrapper, index !== 0 && styles.separator]}
     >
-      <View style={styles.content}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.description}>{description}</Text>
+      <View style={[styles.col, styles.content]}>
+        <Text style={[styles.row, styles.title]}>{title}</Text>
+        <Text style={[styles.row, styles.description]}>{description}</Text>
       </View>
-      <View>{isSelected && <Check width={24} height={24} />}</View>
+      <View style={styles.col}>
+        {isSelected && <Check width={24} height={24} />}
+      </View>
     </TouchableOpacity>
   );
 };
@@ -51,15 +53,20 @@ const makeStyles = (colors: ColorsType) =>
       paddingTop: 10,
       paddingBottom: 12,
       borderColor: 'rgba(223, 230, 237, 0.5)',
-      flexDirection: 'row',
       justifyContent: 'space-between',
+    },
+    row: {
+      flexDirection: 'row',
+    },
+    col: {
+      flexDirection: 'column',
     },
     separator: {
       borderColor: 'rgba(223, 230, 237, 0.5)',
       borderTopWidth: 1,
     },
     content: {
-      marginRight: 52,
+      maxWidth: '90%',
     },
     title: {
       color: colors.midnight,
